@@ -25,17 +25,17 @@ let a =  document.querySelector("a");
 if(localStorage.nome){
   div.style.display = "none";
   section.style.display = "initial";
-  h2.innerHTML = `SEJE BEM VINDO ${localStorage.nome}`
-  a.innerHTML = `VOCE E ${localStorage.nome} ?`;
+  h2.innerHTML = `SEJA BEM VINDO ${localStorage.nome}`
+  a.innerHTML = `VOCE NÃO É ${localStorage.nome} ?`;
 }else{
     function colocarNome(){
-        section.style.display = "none";
-        localStorage.setItem("nome", caixaTexto.value);
+        div.style.display = "initial";
+        localStorage.setItem("nome",caixaTexto.value);
        if(localStorage.nome){
-        div.style.display = "nome";
+        div.style.display = "none";
         section.style.display = "initial";
-        h2.innerHTML = `seje bem vindo ${localStorage.nome}`;
-        a.innerHTML = `voce nao e ${localStorage.nome}? `;
+        h2.innerHTML = `SEJA BEM VINDO  ${localStorage.nome}`;
+        a.innerHTML = `VOCÊ NÃO É ${localStorage.nome}? `;
 
     }
   }
